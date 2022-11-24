@@ -9,7 +9,7 @@
  * @author Juan Federico García
  */
 
-package ventanas;
+package gestor;
 
 public class ventana1 extends javax.swing.JPanel {
 
