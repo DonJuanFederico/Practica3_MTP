@@ -6,10 +6,10 @@
 
 /**
  *
- * @author Juan Federico Garcí­a
+ * @author Juan Federico Garcï¿½a
  */
 
-package ventanas;
+package com.mtp_practica3.ventanas;
 public class Main extends javax.swing.JFrame {
     
     /**
@@ -78,7 +78,7 @@ public class Main extends javax.swing.JFrame {
         jTextArea1.setBackground(new java.awt.Color(240, 240, 240));
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("A fecha del 17 de noviembre\ndel año 2032 se declara el\nEstado de Emergencia con el\nReal Decreto-ley 30/2032, de\n15 de noviembre, por el que\nse adoptan medidas urgentes\nde prevención y contención\npara hacer frente a la crisis\nsanitaria ocasionada por la\nanomalía bacteriana zombie.");
+        jTextArea1.setText("A fecha del 17 de noviembre\ndel aÃ±o 2032 se declara el\nEstado de Emergencia con el\nReal Decreto-ley 30/2032, de\n15 de noviembre, por el que\nse adoptan medidas urgentes\nde prevenciÃ³n y contenciÃ³n\npara hacer frente a la crisis\nsanitaria ocasionada por la\nanomalÃ­a bacteriana zombie.");
         jTextArea1.setHighlighter(null);
         jScrollPane1.setViewportView(jTextArea1);
 
