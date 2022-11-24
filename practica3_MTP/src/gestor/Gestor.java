@@ -8,7 +8,7 @@
  *
  * @author Juan Federico García
  */
-
+//en ensta clase vamos a crear una especie de gestor que gestione las comunicaciones con la base de datos.
 public class Gestor {
     
 }

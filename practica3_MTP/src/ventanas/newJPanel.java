@@ -8,12 +8,12 @@
  *
  * @author golro
  */
-public class ventana1 extends javax.swing.JPanel {
+public class newJPanel extends javax.swing.JPanel {
 
     /**
-     * Crea ventana1
+     * Creates new form newJPanel
      */
-    public ventana1() {
+    public newJPanel() {
         initComponents();
     }
 
@@ -30,11 +30,11 @@ public class ventana1 extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 568, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 284, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
