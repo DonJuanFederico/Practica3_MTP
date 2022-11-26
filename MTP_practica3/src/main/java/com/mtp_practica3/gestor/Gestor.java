@@ -7,7 +7,7 @@
 /**
  *
  * @author Juan Federico García
- */
+ */ya salfo
 package com.mtp_practica3.gestor;
 //en ensta clase vamos a crear una especie de gestor que gestione las comunicaciones con la base de datos.
 public class Gestor {
