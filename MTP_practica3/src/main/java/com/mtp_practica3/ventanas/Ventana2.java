@@ -1,22 +1,19 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
+package com.mtp_practica3.ventanas;
 
 /**
  *
- * @author Juan Federico García
+ * @author Juan Federico
  */
-
-package com.mtp_practica3.ventanas;
-
-public class Ventana1 extends javax.swing.JPanel {
+public class Ventana2 extends javax.swing.JPanel {
 
     /**
-     * Crea ventana1
+     * Creates new form Ventana2
      */
-    public Ventana1() {
+    public Ventana2() {
         initComponents();
     }
 
@@ -33,11 +30,11 @@ public class Ventana1 extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 568, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 284, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
