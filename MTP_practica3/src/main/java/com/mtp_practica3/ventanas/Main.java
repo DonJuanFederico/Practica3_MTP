@@ -4,6 +4,8 @@ import javax.swing.JOptionPane;
 
 public class Main extends javax.swing.JFrame {
     
+    //Ventana1 zombies;
+    //Ventana2 enfermedades;
     private boolean comprobarDatos(){       //este método verifica que todos los campos esten completados.
         if(jTextField1.getText().equals("")){return false;
         }else if(jTextField3.getText().equals("")){return false;
@@ -13,6 +15,11 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         setLocationRelativeTo(null);
+        
+        //zombies = new Ventana1();
+        //enfermedades = new Ventana2();
+        //add(zombies);
+        //add(enfermedades);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -55,6 +62,7 @@ public class Main extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setResizable(false);
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -293,7 +301,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(14, Short.MAX_VALUE))))
+                        .addContainerGap(16, Short.MAX_VALUE))))
         );
 
         pack();
@@ -342,15 +350,22 @@ public class Main extends javax.swing.JFrame {
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         //boton Zombies
         Ventana1 zombies = new Ventana1();
-        zombies.setVisible(true);
-        this.dispose();
+        //zombies.setVisible(true);
+        //enfermedades.setVisible(false);
+        //revalidate();
+        //repaint();
+        //this.dispose();
+        //this.setVisible(false);
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         //boton enfermedades
-        Ventana2 enfermedades = new Ventana2();
-        enfermedades.setVisible(true);
-        this.dispose();
+        //zombies.setVisible(false);
+        //enfermedades.setVisible(true);
+        revalidate();
+        repaint();
+        //this.dispose();
+        //this.setVisible(false);
     }//GEN-LAST:event_jButton4MouseClicked
 
     /**
