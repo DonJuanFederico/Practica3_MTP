@@ -301,7 +301,7 @@ public class Main extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(16, Short.MAX_VALUE))))
+                        .addContainerGap(35, Short.MAX_VALUE))))
         );
 
         pack();
@@ -349,23 +349,24 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         //boton Zombies
-        Ventana1 zombies = new Ventana1();
-        //zombies.setVisible(true);
+        ventanaZombie zombies = new ventanaZombie();
+        zombies.setVisible(true);
+        this.setVisible(false);
         //enfermedades.setVisible(false);
         //revalidate();
         //repaint();
         //this.dispose();
-        //this.setVisible(false);
+        
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         //boton enfermedades
-        //zombies.setVisible(false);
-        //enfermedades.setVisible(true);
+        VentanaEnfermedad enfermedad = new VentanaEnfermedad();
+        enfermedad.setVisible(true); //Mostrar esta ventana
+        this.setVisible(false); //NO mosrtar esta ventana
         revalidate();
         repaint();
         //this.dispose();
-        //this.setVisible(false);
     }//GEN-LAST:event_jButton4MouseClicked
 
     /**
