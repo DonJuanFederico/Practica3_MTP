@@ -19,6 +19,7 @@ public class ventanaZombie extends javax.swing.JFrame {
      */
     public ventanaZombie() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
