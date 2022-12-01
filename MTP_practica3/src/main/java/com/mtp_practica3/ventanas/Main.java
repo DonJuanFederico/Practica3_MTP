@@ -1,18 +1,25 @@
 package com.mtp_practica3.ventanas;
 
 import javax.swing.JOptionPane;
+import com.mtp_practica3.gestor.Gestor;
 
 public class Main extends javax.swing.JFrame {
+    
+    Gestor gestor = new Gestor();
     
     private boolean comprobarDatos(){       //este método verifica que todos los campos esten completados.
         if(jTextField1.getText().equals("")){return false;
         }else if(jTextField3.getText().equals("")){return false;
-        }else return !"...".equals(jComboBox1.getSelectedItem().toString());
+        }else{
+            return !"...".equals(jComboBox1.getSelectedItem().toString());
+        }
     }
     public Main() {
         initComponents();
         setLocationRelativeTo(null);
+        
     }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -340,12 +347,14 @@ public class Main extends javax.swing.JFrame {
         // jDialog1.setVisible(true);         para mostrar el dialogo emergente
         // jComboBox1.addItem("lo que quieras2)     //añadir un nuevo elemento a la desplegable
         String DNI =  jTextField1.getText();   //Cogemos el texto que insertamos
-        String genero;
+        String genero = jComboBox1.getSelectedItem().toString();
         if(comprobarDatos() == false){
             JOptionPane.showMessageDialog(null,"Faltan campos por completar", "ADVERTENCIA!",JOptionPane.WARNING_MESSAGE);
         }else{
             jTextField2.setText(DNI);   //metemos el texto de Field 1 en el objeto
         }
+        String arma = gestor.sacarArma(jTextField1.getText(), jTextField3.getText(), genero, jTextField6.getText());
+        jTextField4.setText(arma);
     }//GEN-LAST:event_jButton1ActionPerformed
     
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -394,7 +403,7 @@ public class Main extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -419,6 +428,7 @@ public class Main extends javax.swing.JFrame {
                 new Main().setVisible(true);
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
