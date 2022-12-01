@@ -4,22 +4,14 @@ import javax.swing.JOptionPane;
 
 public class Main extends javax.swing.JFrame {
     
-    //Ventana1 zombies;
-    //Ventana2 enfermedades;
     private boolean comprobarDatos(){       //este método verifica que todos los campos esten completados.
         if(jTextField1.getText().equals("")){return false;
         }else if(jTextField3.getText().equals("")){return false;
-        }else if(jComboBox1.getSelectedItem().toString()== "..."){return false;
-        }else{return true;}
+        }else return !"...".equals(jComboBox1.getSelectedItem().toString());
     }
     public Main() {
         initComponents();
         setLocationRelativeTo(null);
-        
-        //zombies = new Ventana1();
-        //enfermedades = new Ventana2();
-        //add(zombies);
-        //add(enfermedades);
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -223,6 +215,7 @@ public class Main extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jTextField4.setEditable(false);
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);

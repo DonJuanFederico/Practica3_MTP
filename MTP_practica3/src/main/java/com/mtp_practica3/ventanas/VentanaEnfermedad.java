@@ -15,6 +15,7 @@ public class VentanaEnfermedad extends javax.swing.JFrame {
      */
     public VentanaEnfermedad() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
