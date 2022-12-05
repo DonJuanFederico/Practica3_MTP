@@ -365,6 +365,7 @@ public class Main extends javax.swing.JFrame {
         }
         String arma = gestor.sacarArma(jTextField1.getText(), jTextField3.getText(), genero, jTextField6.getText());
         jTextField4.setText(arma);
+        //soy paloma, creo q deberiamos cambiar este mñetodo simplemente a segun el arma sacar la letalidad (nos evita errores en la bbdd)
     }//GEN-LAST:event_jButton1ActionPerformed
     
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
