@@ -4,9 +4,10 @@
  */
 package com.mtp_practica3.ventanas;
 
+
 /**
  *
- * @author ppere
+ * @author Juan Federico garcía Alonso-Burón
  */
 public class VentanaEnfermedad extends javax.swing.JFrame {
     
@@ -65,8 +66,8 @@ public class VentanaEnfermedad extends javax.swing.JFrame {
 
     private void InicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InicioActionPerformed
         // TODO add your handling code here:
-         Main ventanaMain = new Main();
-        ventanaMain.setVisible(true);
+        //Main ventanaMain = new Main();
+        //principal.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_InicioActionPerformed
 

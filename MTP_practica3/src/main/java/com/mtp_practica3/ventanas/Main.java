@@ -4,11 +4,6 @@ import javax.swing.JOptionPane;
 import com.mtp_practica3.gestor.Gestor;
 
 public class Main extends javax.swing.JFrame {
-    
-    String dni = "";
-    String nombre = "";
-    String edad = "";
-    
     Gestor gestor = new Gestor();
     
     private boolean comprobarDatos(){       //este método verifica que todos los campos esten completados.
@@ -18,14 +13,12 @@ public class Main extends javax.swing.JFrame {
             return !"...".equals(jComboBox1.getSelectedItem().toString());
         }
     }
+    public void visiblePrincipal(){
+        this.setVisible(true);
+    }    
     public Main() {
         initComponents();
         setLocationRelativeTo(null);
-        jTextField1.setText(dni);        //DNI
-        jTextField3.setText(nombre);        //Nombre
-        jTextField6.setText(edad);        //Edad
-       
-        
     }
     
     @SuppressWarnings("unchecked")
@@ -354,9 +347,7 @@ public class Main extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // jDialog1.setVisible(true);         para mostrar el dialogo emergente
         // jComboBox1.addItem("lo que quieras2)     //añadir un nuevo elemento a la desplegable
-        dni =  jTextField1.getText();
-        nombre = jTextField3.getText();
-        edad = jTextField6.getText();
+        String dni =  jTextField1.getText();
         String genero = jComboBox1.getSelectedItem().toString();
         if(comprobarDatos() == false){
             JOptionPane.showMessageDialog(null,"Faltan campos por completar", "ADVERTENCIA!",JOptionPane.WARNING_MESSAGE);
@@ -385,9 +376,6 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         //boton Zombies
-        dni =  jTextField1.getText();
-        nombre = jTextField3.getText();
-        edad = jTextField6.getText();
         ventanaZombie zombies = new ventanaZombie();
         zombies.setVisible(true);
         this.setVisible(false);
@@ -400,9 +388,6 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         //boton enfermedades
-        dni =  jTextField1.getText();
-        nombre = jTextField3.getText();
-        edad = jTextField6.getText();
         VentanaEnfermedad enfermedad = new VentanaEnfermedad();
         enfermedad.setVisible(true); //Mostrar esta ventana
         this.setVisible(false); //NO mosrtar esta ventana

@@ -74,9 +74,10 @@ public class ventanaZombie extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void inicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inicioActionPerformed
-        // TODO add your handling code here:
-        Main ventanaMain = new Main();
-        ventanaMain.setVisible(true);
+        
+        Main main = new Main();
+        main.visiblePrincipal();
+        //ventanaMain.setVisible(true);
         this.setVisible(false);
         
         
