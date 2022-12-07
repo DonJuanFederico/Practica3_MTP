@@ -7,6 +7,7 @@ public class Main extends javax.swing.JFrame {
     String dni = "";
     String nombre = "";
     String edad = "";
+    int edadInput; 
     
     Gestor gestor = new Gestor();
     
@@ -396,17 +397,19 @@ public class Main extends javax.swing.JFrame {
         // jComboBox1.addItem("lo que quieras2)     //añadir un nuevo elemento a la desplegable
         dni =  jTextField1.getText();
         nombre = jTextField3.getText();
-        int edadP;
-        String preedad = jTextField6.getText();
-        edadP = Integer.parseInt(preedad);
+        edad = jTextField6.getText();
+        edadInput = Integer.parseInt(edad);
         String genero = jComboBox1.getSelectedItem().toString();
+        boolean iniciar = gestor.IniciarSesion("54479760M", "Paloma", "Femenino", 19);
+        //boolean iniciar = gestor.IniciarSesion(dni, nombre, genero, edadInput);
         if(comprobarDatos() == false){
             JOptionPane.showMessageDialog(null,"Faltan campos por completar", "ADVERTENCIA!",JOptionPane.WARNING_MESSAGE);
         }else{
-            if(gestor.IniciarSesion(dni, nombre, genero, edadP)== true){
+            if(iniciar== true){
+            System.out.println("todo okey");
             label10.setText("Sesion iniciada");
         }else{
-                JOptionPane.showMessageDialog(null,"Datos erroneos", "ERROR!",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null,"Datos erróneos", "ERROR!",JOptionPane.ERROR_MESSAGE);
             }
             jTextField2.setText(dni);   //metemos el texto de Field 1 en el objeto
         }
