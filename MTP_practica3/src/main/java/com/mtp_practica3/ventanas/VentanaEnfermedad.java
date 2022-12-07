@@ -16,8 +16,8 @@ public class VentanaEnfermedad extends javax.swing.JFrame {
     public VentanaEnfermedad() {
         
         initComponents();
+        //La linea de abajo no funciona. Dan errores referentes a la base de datos
         jTextArea1.setText(gestor.getTodasEnfermedades());
-        jTextArea1.setText("prueba");
         setLocationRelativeTo(null);
     }
     public void run() {
