@@ -73,6 +73,7 @@ public class Gestor {
             while (resultados.next()) {
                 System.out.println("TIPO DE ENFERMEDAD: " + resultados.getString("nombre") + "\n" +
                         "IDENTIFICACIÓN DE LA CURA: " + resultados.getString("id"));
+                
                    }
         } catch (Exception e) {
             e.printStackTrace();
@@ -129,7 +130,7 @@ public class Gestor {
          //A este metodo se le pasa un string q contiene el nombre del arma.
          //Este metodo debe devolver un String EXCLUSIVAMENTE con la letalidad del arma.
          //En caso de no poder encontrar el arma, el metodo devolvera "error".
-        String resultado = "";
+        String resultado2 = "";
         try {
             Class.forName(driver);
             conexion = DriverManager.getConnection(url);
@@ -137,15 +138,16 @@ public class Gestor {
             
            resultados = statement.executeQuery("SELECT letalidad FROM arma WHERE nombre == '" + nombreArma + "';");  
             while (resultados.next()) {
-                resultado = resultado + (resultados.getString("letalidad"));
+                
+                resultado2 = resultados.getString("letalidad");
                    }
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Error en la base de datos");
-            resultado = "error";
+            resultado2 = "error";
         }
-        System.out.println(resultado);
-        return resultado;
+        System.out.println(resultado2);
+        return resultado2;
     }
     
     
@@ -247,4 +249,5 @@ public class Gestor {
         }
     }
     * */
+    
 }
