@@ -40,25 +40,30 @@ public class Gestor {
         boolean sexB ;
         boolean edadB;
         
-    public void getTodasEnfermedades(){
+    public String getTodasEnfermedades(){
+        String string = "";
         try {
             Class.forName(driver);
             conexion = DriverManager.getConnection(url);
             statement = conexion.createStatement();
            resultados = statement.executeQuery("SELECT * FROM enferm");
+           /*
            System.out.println("TIPO DE ENFERMEDAD            IDENTIFICACIÓN DE CURA\n"
                              + " ====================================================== ");
+           */
            while (resultados.next()) {
-               System.out.println( resultados.getString("nombre") + "    =======>      " + 
-                       resultados.getString("id"));
+               string = string + ( resultados.getString("nombre") + "    =======>      " + 
+                       resultados.getString("id")) + "/n";
                    }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+        return string;
     }
          
-    public void getTipoEnfermedad(String nombreEnfermedad) {
+    public String getTipoEnfermedad(String nombreEnfermedad) {
+        //Este metodo tiene que devolver un String exclusivamente con la cura de la enfermedad.
+        String cura = "";
         try {
             Class.forName(driver);
             conexion = DriverManager.getConnection(url);
@@ -72,6 +77,7 @@ public class Gestor {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return cura;
     }
     
      public boolean IniciarSesion(String dniSelec, String nombreSelec, String sexoSelec, int edadSelec) {
@@ -97,7 +103,8 @@ public class Gestor {
             return (dniB == true)&&(nomB==true)&&(sexB==true)&&(edadB==true); 
             }   
         
-     public void getTiposZombies(String nombreZombie) {
+     public String getTiposZombies(String nombreZombie) {
+         String resultado = "";
         try {
             Class.forName(driver);
 //          conexion = DriverManager.getConnection(url, usuario, clave);
@@ -107,7 +114,7 @@ public class Gestor {
             resultados = statement.executeQuery("SELECT * FROM zombie WHERE nombre == '" + nombreZombie + "';");
             
             while (resultados.next()) {
-                System.out.println("nombre: " + resultados.getString("nombre") + "\n" +
+                resultado = ("nombre: " + resultados.getString("nombre") + "\n" +
                         "Tipo de Ataque: " + resultados.getString("tipoAtaque")+ "\n" + 
                        "Nivel de Infección: "+ resultados.getString("nivelInfeccion") +  "\n" +
                         "Rapidez: "+ resultados.getString("rapidez"));
@@ -115,11 +122,14 @@ public class Gestor {
         } catch (Exception e) {
             e.printStackTrace();
         } 
-        
+        return resultado;
     }
      
-     public void getLetalidad(String nombreArma) {
-
+     public String getLetalidad(String nombreArma) {
+         //A este metodo se le pasa un string q contiene el nombre del arma.
+         //Este metodo debe devolver un String EXCLUSIVAMENTE con la letalidad del arma.
+         //En caso de no poder encontrar el arma, el metodo devolvera "error".
+        String resultado = "";
         try {
             Class.forName(driver);
             conexion = DriverManager.getConnection(url);
@@ -127,11 +137,15 @@ public class Gestor {
             
            resultados = statement.executeQuery("SELECT letalidad FROM arma WHERE nombre == '" + nombreArma + "';");  
             while (resultados.next()) {
-                System.out.println("Letalidad: " + resultados.getString("letalidad"));
+                resultado = resultado + (resultados.getString("letalidad"));
                    }
         } catch (Exception e) {
             e.printStackTrace();
+            System.out.println("Error en la base de datos");
+            resultado = "error";
         }
+        System.out.println(resultado);
+        return resultado;
     }
     
     
