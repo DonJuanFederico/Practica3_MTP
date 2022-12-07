@@ -91,10 +91,15 @@ public class Gestor {
             resultados = statement.executeQuery("SELECT * FROM persona WHERE dni == '" +dniSelec+ "' AND nombre =='"+nombreSelec+"' AND sexo == '"+sexoSelec+"' AND edad =="+edadSelec+";");
             //SELECT * FROM persona WHERE dni == dniSelec , nombre == nombreSelec , sexo == '"+sexoSelec+"', edad ==edadSelec;
             while (resultados.next()) {
-                dniB = (resultados.getString("dni") == null ? dniSelec == null : resultados.getString("dni").equals(dniSelec));
+                /** dniB = (resultados.getString("dni") == null ? dniSelec == null : resultados.getString("dni").equals(dniSelec));
                 nomB = (resultados.getString("nombre") == null ? nombreSelec == null : resultados.getString("nombre").equals(nombreSelec)); 
                 sexB = (resultados.getString("sexo") == null ? sexoSelec == null : resultados.getString("sexo").equals(sexoSelec));
                 edadB = resultados.getInt("edad") == edadSelec; 
+                **/
+                dniB= resultados.getString("dni") == dniSelec;
+                nomB = resultados.getString("nombre") == nombreSelec;
+                sexB = resultados.getString("sexo")== sexoSelec;
+                edadB = resultados.getInt("edad") == edadSelec;                 
              
                    }
         } catch (Exception e) {
