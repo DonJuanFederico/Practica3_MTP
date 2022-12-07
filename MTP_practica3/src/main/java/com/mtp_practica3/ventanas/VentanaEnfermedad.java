@@ -9,15 +9,16 @@ import com.mtp_practica3.gestor.Gestor;
  * @author ppere
  */
 public class VentanaEnfermedad extends javax.swing.JFrame {
-    
+    Gestor gestor = new Gestor();
     /**
      * Creates new form VentanaEnfermedad
      */
     public VentanaEnfermedad() {
         
         initComponents();
+        jTextArea1.setText(gestor.getTodasEnfermedades());
+        jTextArea1.setText("prueba");
         setLocationRelativeTo(null);
-        
     }
     public void run() {
                 new VentanaEnfermedad().setVisible(true);
@@ -45,6 +46,7 @@ public class VentanaEnfermedad extends javax.swing.JFrame {
             }
         });
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
