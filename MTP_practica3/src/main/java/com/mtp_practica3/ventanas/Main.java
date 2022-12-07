@@ -396,22 +396,20 @@ public class Main extends javax.swing.JFrame {
         // jComboBox1.addItem("lo que quieras2)     //añadir un nuevo elemento a la desplegable
         dni =  jTextField1.getText();
         nombre = jTextField3.getText();
-        edad = jTextField6.getText();
+        int edadP;
+        String preedad = jTextField6.getText();
+        edadP = Integer.parseInt(preedad);
         String genero = jComboBox1.getSelectedItem().toString();
         if(comprobarDatos() == false){
             JOptionPane.showMessageDialog(null,"Faltan campos por completar", "ADVERTENCIA!",JOptionPane.WARNING_MESSAGE);
         }else{
-            if(gestor.IniciarSesion(dni, nombre, genero, edad)== true){
+            if(gestor.IniciarSesion(dni, nombre, genero, edadP)== true){
             label10.setText("Sesion iniciada");
         }else{
                 JOptionPane.showMessageDialog(null,"Datos erroneos", "ERROR!",JOptionPane.ERROR_MESSAGE);
             }
             jTextField2.setText(dni);   //metemos el texto de Field 1 en el objeto
         }
-        
-       // String arma = gestor.getLetalidad();
-        //jTextField4.setText(arma);
-        //soy paloma, creo q deberiamos cambiar este mñetodo simplemente a segun el arma sacar la letalidad (nos evita errores en la bbdd)
     }//GEN-LAST:event_jButton1ActionPerformed
     
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
