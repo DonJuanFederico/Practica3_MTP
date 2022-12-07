@@ -81,7 +81,7 @@ public class Gestor {
         return cura;
     }
     
-     public boolean IniciarSesion(String dniSelec, String nombreSelec, String sexoSelec, int edadSelec) {
+     public boolean IniciarSesion(String dniSelec, String nombreSelec, String sexoSelec, String edadSelec) {
         try {
             Class.forName(driver);
 //          conexion = DriverManager.getConnection(url, usuario, clave);
@@ -94,7 +94,7 @@ public class Gestor {
                 dniB = (resultados.getString("dni") == null ? dniSelec == null : resultados.getString("dni").equals(dniSelec));
                 nomB = (resultados.getString("nombre") == null ? nombreSelec == null : resultados.getString("nombre").equals(nombreSelec)); 
                 sexB = (resultados.getString("sexo") == null ? sexoSelec == null : resultados.getString("sexo").equals(sexoSelec));
-                edadB = resultados.getInt("edad") == edadSelec; 
+                edadB = resultados.getString("edad") == edadSelec; 
              
                    }
         } catch (Exception e) {
