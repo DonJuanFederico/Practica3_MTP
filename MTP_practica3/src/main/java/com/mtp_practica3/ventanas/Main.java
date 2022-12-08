@@ -21,8 +21,8 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         setLocationRelativeTo(null);
-        jTextField1.setText(dni);        //DNI
-        jTextField3.setText(nombre);        //Nombre
+        jTextField1.setText(dni);         //DNI
+        jTextField3.setText(nombre);      //Nombre
         jTextField6.setText(edad);        //Edad
        
         
