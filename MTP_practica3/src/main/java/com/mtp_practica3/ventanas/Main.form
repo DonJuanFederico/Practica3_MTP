@@ -54,15 +54,16 @@
                   <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="label5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jTextField2" min="-2" pref="166" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane1" min="-2" pref="257" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="273" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
@@ -111,10 +112,11 @@
                                   <Component id="jButton3" alignment="3" min="-2" pref="47" max="-2" attributes="0"/>
                                   <Component id="jButton4" alignment="3" min="-2" pref="50" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jScrollPane1" alignment="0" min="-2" pref="227" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="label5" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jTextField2" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -169,6 +171,7 @@
             </Property>
             <Property name="rows" type="int" value="5"/>
             <Property name="text" type="java.lang.String" value="A fecha del 17 de noviembre&#xa;del a&#xf1;o 2032 se declara el&#xa;Estado de Emergencia con el&#xa;Real Decreto-ley 30/2032, de&#xa;15 de noviembre, por el que&#xa;se adoptan medidas urgentes&#xa;de prevenci&#xf3;n y contenci&#xf3;n&#xa;para hacer frente a la crisis&#xa;sanitaria ocasionada por la&#xa;anomal&#xed;a bacteriana zombie."/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.BevelBorderInfo">
                 <BevelBorder/>
@@ -178,6 +181,11 @@
               <ComponentRef name="null"/>
             </Property>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleParent" type="javax.accessibility.Accessible" editor="org.netbeans.modules.form.ComponentChooserEditor">
+              <ComponentRef name="jTextArea1"/>
+            </Property>
+          </AccessibilityProperties>
         </Component>
       </SubComponents>
     </Container>
