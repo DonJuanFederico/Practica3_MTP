@@ -243,8 +243,8 @@ public class ventanaZombie extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String nombre = gestor.getTiposZombies(jComboBox1.getText());
-        jTextField1.setText(nombre);
+        //String nombre = gestor.getTiposZombies(jComboBox1.getText());
+        //jTextField1.setText(nombre);
         //jTextField2.setText();       // como hacer para sacar solo el ataque
         //jTextField3.setText();       // como hacer para sacar solo la rapidez
         //jTextField4.setText();       // como hacer para sacar solo la vel. infec.

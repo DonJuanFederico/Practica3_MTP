@@ -219,10 +219,6 @@ public class VentanaEnfermedad extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        //boton Zombies
-        dni =  jTextField1.getText();
-        nombre = jTextField3.getText();
-        edad = jTextField6.getText();
         ventanaZombie zombies = new ventanaZombie();
         zombies.setVisible(true);
         this.setVisible(false);
