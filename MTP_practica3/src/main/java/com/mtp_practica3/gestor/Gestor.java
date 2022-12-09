@@ -52,8 +52,8 @@ public class Gestor {
                              + " ====================================================== ");
            */
            while (resultados.next()) {
-               string = string + ( resultados.getString("nombre") + "    =======>      " + 
-                       resultados.getString("id")) + "/n";
+               string = string + ( resultados.getString("nombre") + " =======>  " + 
+                       resultados.getString("id")) + "\n";
                    }
         } catch (Exception e) {
             e.printStackTrace();
