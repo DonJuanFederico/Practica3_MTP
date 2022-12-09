@@ -80,23 +80,19 @@ public class Gestor {
     }
     
      public boolean IniciarSesion(String dniSelec, String nombreSelec, String sexoSelec, int edadSelec) {
+           //public boolean IniciarSesion(String dniSelec, String nombreSelec){
         try {
             Class.forName(driver);
-//          conexion = DriverManager.getConnection(url, usuario, clave);
             conexion = DriverManager.getConnection(url);
             statement = conexion.createStatement();
 
             resultados = statement.executeQuery("SELECT * FROM persona WHERE dni == '" +dniSelec+ "' AND nombre =='"+nombreSelec+"' AND sexo == '"+sexoSelec+"' AND edad =="+edadSelec+";");
+            //resultados = statement.executeQuery("SELECT * FROM persona WHERE dni == '" +dniSelec+ "' AND nombre =='" + nombreSelec +"';");
             //SELECT * FROM persona WHERE dni == dniSelec , nombre == nombreSelec , sexo == '"+sexoSelec+"', edad ==edadSelec;
             while (resultados.next()) {
-                /** dniB = (resultados.getString("dni") == null ? dniSelec == null : resultados.getString("dni").equals(dniSelec));
-                nomB = (resultados.getString("nombre") == null ? nombreSelec == null : resultados.getString("nombre").equals(nombreSelec)); 
+                dniB = (resultados.getString("dni") == null ? dniSelec == null : resultados.getString("dni").equals(dniSelec));
+                nomB = (resultados.getString("nombre") == null ? nombreSelec == null : resultados.getString("nombre").equals(nombreSelec));
                 sexB = (resultados.getString("sexo") == null ? sexoSelec == null : resultados.getString("sexo").equals(sexoSelec));
-                edadB = resultados.getInt("edad") == edadSelec; 
-                **/
-                dniB= resultados.getString("dni") == dniSelec;
-                nomB = resultados.getString("nombre") == nombreSelec;
-                sexB = resultados.getString("sexo")== sexoSelec;
                 edadB = resultados.getInt("edad") == edadSelec;                 
              
                    }
@@ -104,7 +100,8 @@ public class Gestor {
             e.printStackTrace();
         } 
             //RETURN:
-            return(dniB == true)&&(nomB==true)&&(sexB==true)&&(edadB==true); 
+            //return(dniB == true)&&(nomB==true)&&(sexB==true)&&(edadB==true);
+            return(nomB & dniB&sexB &edadB); 
             }   
         
      public String getTiposZombies(String nombreZombie) {
@@ -152,105 +149,5 @@ public class Gestor {
         System.out.println(resultado2);
         return resultado2;
     }
-    
-    
-    
-  
-    
-    // COMENTO LO DE JUAN (Paloma)
-/**
-        String driver = "org.sqlite.JDBC";
-        String url = "jdbc:sqlite:zombies.db";
-
-//        String usuario = "mtp";
-//        String clave = "mtpPass";
-        
-        
-        
-        
-    public String sacarArma(String dni, String nombre, String sexo, String edad){
-        String arma = "";
-        Statement statement = null;
-        Connection conexion = null;
-        ResultSet resultados = null;
-
-        try {
-            Class.forName(driver);
-            conexion = DriverManager.getConnection(url);
-            statement = conexion.createStatement();
-            resultados = statement.executeQuery("SELECT nombre, FROM arma \nWHERE personaPropietaria == " + dni + ";");
-            arma = resultados.getString("nombre");
-        } catch (ClassNotFoundException | SQLException e) {
-        } finally {
-            try {
-                if (resultados != null) {
-                    resultados.close();
-                }
-            } catch (SQLException ex) {
-            }
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-            } catch (SQLException ex) {
-            }
-            try {
-                if (conexion != null) {
-                    conexion.close();
-                }
-            } catch (SQLException ex) {
-            }
-        }
-        return arma;
-    }
-    
-    public void consultar(){
-        Statement statement = null;
-        Connection conexion = null;
-        ResultSet resultados = null;
-
-        try {
-            Class.forName(driver);
-//          conexion = DriverManager.getConnection(url, usuario, clave);
-            conexion = DriverManager.getConnection(url);
-            statement = conexion.createStatement();
-
-            //statement.executeUpdate("CREATE TABLE usuarios (nombre VARCHAR(25), login VARCHAR(15), edad INT, nivelParticipacion FLOAT)");
-
-           // statement.executeUpdate("INSERT INTO usuarios VALUES('Paloma','paloma',23, 0.64)");
-           //  statement.executeUpdate("INSERT INTO usuarios VALUES('Juan','juan',38, 0.23)");
-           // statement.executeUpdate("INSERT INTO usuarios VALUES('Tomñas','tomasito',28, 0.82)");
-
-            resultados = statement.executeQuery("SELECT * FROM persona;");
-
-            while (resultados.next()) {
-                System.out.println(resultados.getString("nombre") + " " +
-                        resultados.getString("dni")+ " " + 
-                        resultados.getString("sexo") +  " " +
-                        resultados.getString("enfermedad"));
-                   }
-        } catch (ClassNotFoundException | SQLException e) {
-        } finally {
-            try {
-                if (resultados != null) {
-                    resultados.close();
-                }
-            } catch (SQLException ex) {
-            }
-            try {
-                if (statement != null) {
-                    statement.close();
-                }
-            } catch (SQLException ex) {
-            }
-            try {
-                if (conexion != null) {
-                    conexion.close();
-                }
-            } catch (SQLException ex) {
-            }
-        }
-    }
-    * */
     
 }

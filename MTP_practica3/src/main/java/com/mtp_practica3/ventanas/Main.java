@@ -397,13 +397,12 @@ public class Main extends javax.swing.JFrame {
         edad = jTextField6.getText();
         edadInput = Integer.parseInt(edad);
         String genero = jComboBox1.getSelectedItem().toString();
-        boolean iniciar = gestor.IniciarSesion("54479760M", "Paloma", "Femenino", 19);
+        boolean a = gestor.IniciarSesion(dni, nombre, genero, edadInput);
         //boolean iniciar = gestor.IniciarSesion(dni, nombre, genero, edadInput);
         if(comprobarDatos() == false){
             JOptionPane.showMessageDialog(null,"Faltan campos por completar", "ADVERTENCIA!",JOptionPane.WARNING_MESSAGE);
         }else{
-            if(iniciar== true){
-            System.out.println("todo okey");
+            if(a== true){
             label10.setText("Sesion iniciada");
         }else{
                 JOptionPane.showMessageDialog(null,"Datos erróneos", "ERROR!",JOptionPane.ERROR_MESSAGE);
