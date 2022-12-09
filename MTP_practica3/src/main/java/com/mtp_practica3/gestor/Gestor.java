@@ -52,7 +52,7 @@ public class Gestor {
                              + " ====================================================== ");
            */
            while (resultados.next()) {
-               string = string + ( resultados.getString("nombre") + " =======>  " + 
+               string = string + ( resultados.getString("nombre") + " =======>   " + 
                        resultados.getString("id")) + "\n";
                    }
         } catch (Exception e) {
@@ -71,9 +71,7 @@ public class Gestor {
            resultados = statement.executeQuery("SELECT nombre, id FROM enfermedad LEFT JOIN cura ON cura.enfermedad = enfermedad.nombre WHERE enfermedad.nombre == '" + nombreEnfermedad + "';");
             
             while (resultados.next()) {
-                System.out.println("TIPO DE ENFERMEDAD: " + resultados.getString("nombre") + "\n" +
-                        "IDENTIFICACIÓN DE LA CURA: " + resultados.getString("id"));
-                
+                cura = resultados.getString("id");
                    }
         } catch (Exception e) {
             e.printStackTrace();
