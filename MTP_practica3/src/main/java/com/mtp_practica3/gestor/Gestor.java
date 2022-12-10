@@ -85,7 +85,7 @@ public class Gestor {
             Class.forName(driver);
             conexion = DriverManager.getConnection(url);
             statement = conexion.createStatement();
-           resultados = statement.executeQuery("SELECT nombre, id FROM enfermedad LEFT JOIN cura ON cura.enfermedad = enfermedad.nombre WHERE enfermedad.nombre == '" + nombreEnfermedad + "';");
+            resultados = statement.executeQuery("SELECT * FROM enferm");
             
             while (resultados.next()) {
                 cura = resultados.getString("id");
