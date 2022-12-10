@@ -93,7 +93,11 @@ public class Gestor {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return cura;
+        if(cura == ""){
+            return "no hay cura";
+        }else{
+            return cura;
+        }
     }
     
      public boolean IniciarSesion(String dniSelec, String nombreSelec, String sexoSelec, int edadSelec) {
