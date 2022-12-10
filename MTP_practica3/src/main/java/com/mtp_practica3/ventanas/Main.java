@@ -11,6 +11,7 @@ public class Main extends javax.swing.JFrame {
     
     Gestor gestor = new Gestor();
     
+    
     private boolean comprobarDatos(){       //este método verifica que todos los campos esten completados.
         if(jTextField1.getText().equals("")){return false;
         }else if(jTextField3.getText().equals("")){return false;
@@ -24,7 +25,7 @@ public class Main extends javax.swing.JFrame {
         jTextField1.setText(dni);         //DNI
         jTextField3.setText(nombre);      //Nombre
         jTextField6.setText(edad);        //Edad
-       
+        
         
     }
     

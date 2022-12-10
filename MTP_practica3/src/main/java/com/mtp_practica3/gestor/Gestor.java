@@ -40,6 +40,23 @@ public class Gestor {
         boolean sexB ;
         boolean edadB;
         
+        
+     public String getTodosZombies(){
+        String stringZombies = "";
+        try {
+            Class.forName(driver);
+            conexion = DriverManager.getConnection(url);
+            statement = conexion.createStatement();
+           resultados = statement.executeQuery("SELECT nombre FROM zombie");
+           
+           while (resultados.next()) {
+               stringZombies = stringZombies +";"+ resultados.getString("nombre"); 
+                   }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return stringZombies;
+     }
     public String getTodasEnfermedades(){
         String string = "";
         try {
@@ -115,10 +132,10 @@ public class Gestor {
             resultados = statement.executeQuery("SELECT * FROM zombie WHERE nombre == '" + nombreZombie + "';");
             
             while (resultados.next()) {
-                resultado = ("nombre: " + resultados.getString("nombre") + "\n" +
-                        "Tipo de Ataque: " + resultados.getString("tipoAtaque")+ "\n" + 
-                       "Nivel de Infección: "+ resultados.getString("nivelInfeccion") +  "\n" +
-                        "Rapidez: "+ resultados.getString("rapidez"));
+                resultado = (resultados.getString("nombre") + ";" +
+                       resultados.getString("tipoAtaque")+ ";" + 
+                       resultados.getString("nivelInfeccion") +  ";" +
+                       resultados.getString("rapidez"));
                    }
         } catch (Exception e) {
             e.printStackTrace();
