@@ -80,24 +80,19 @@ public class Gestor {
          
     public String getTipoEnfermedad(String nombreEnfermedad) {
         //Este metodo tiene que devolver un String exclusivamente con la cura de la enfermedad.
-        String cura = "";
+        String curaE = "";
         try {
             Class.forName(driver);
             conexion = DriverManager.getConnection(url);
             statement = conexion.createStatement();
-            resultados = statement.executeQuery("SELECT * FROM enferm");
+            resultados = statement.executeQuery("SELECT * FROM enferm WHERE nombre == '"+nombreEnfermedad+"' ;");
             
             while (resultados.next()) {
-                cura = resultados.getString("id");
+                curaE = resultados.getString("id");
                    }
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-        if(cura == ""){
-            return "no hay cura";
-        }else{
-            return cura;
-        }
+            e.printStackTrace();   
+        }return curaE;
     }
     
      public boolean IniciarSesion(String dniSelec, String nombreSelec, String sexoSelec, int edadSelec) {

@@ -269,18 +269,11 @@ public class ventanaZombie extends javax.swing.JFrame {
     }//GEN-LAST:event_inicioActionPerformed
 
     private void jComboZombiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboZombiesActionPerformed
-        // SACAR TODOS LOS TIPOS DE ZOMBIES
-       String zombieSelec = jComboZombies.getSelectedItem().toString();
-       String infoZombies = gestor.getTiposZombies(zombieSelec);
-       String[] infoArray = infoZombies.split(separador);
-       String nombreZ = infoArray[0];
-       String ataqueZ = infoArray[1];
-       String infeccionZ = infoArray[2];
-       String rapidezZ = infoArray[3];
+       
     }//GEN-LAST:event_jComboZombiesActionPerformed
 
     private void jTextFieldNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNombreActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTextFieldNombreActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -299,11 +292,11 @@ public class ventanaZombie extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
+      
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jTextField4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
